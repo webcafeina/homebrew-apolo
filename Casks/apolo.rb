@@ -7,7 +7,7 @@ cask "apolo" do
   url "https://github.com/webcafeina/Apolo/releases/download/v#{version}/Apolo_#{version}_universal.dmg"
   name "Apolo"
   desc "Image optimizer with Squoosh's engines"
-  homepage "https://apolo.webcafeina.com"
+  homepage "https://apolo.webcafeina.com/"
 
   livecheck do
     url :url
