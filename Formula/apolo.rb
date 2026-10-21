@@ -3,7 +3,7 @@
 class Apolo < Formula
   desc "Image optimizer with Squoosh's engines: CLI and MCP server"
   homepage "https://apolo.webcafeina.com/"
-  version "0.13.0"
+  version "0.14.0"
   license "GPL-3.0-only"
 
   livecheck do
@@ -16,18 +16,18 @@ class Apolo < Formula
   # la prueba del tap lo instala de verdad en macOS y Linux.
 
   on_macos do
-    url "https://github.com/webcafeina/Apolo/releases/download/v0.13.0/apolo-cli-0.13.0-macos-universal.tar.gz"
-    sha256 "5e5e4d8667da789ae578b3f33ecdb56431211cb3642b612614e9d58e406f9a92"
+    url "https://github.com/webcafeina/Apolo/releases/download/v0.14.0/apolo-cli-0.14.0-macos-universal.tar.gz"
+    sha256 "9896e38d38631fca7050b68154acbca5c192cf172f659a853329126370f0fdfc"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/webcafeina/Apolo/releases/download/v0.13.0/apolo-cli-0.13.0-linux-amd64.tar.gz"
-      sha256 "6945692b76f8b30325e4b280a3b3df5c228270c4222624052c08d9db6f7203b8"
+      url "https://github.com/webcafeina/Apolo/releases/download/v0.14.0/apolo-cli-0.14.0-linux-amd64.tar.gz"
+      sha256 "e096294a085e17309a217067b398905d4763f3d01d6d18bd20a139edcec1cadd"
     end
     on_arm do
-      url "https://github.com/webcafeina/Apolo/releases/download/v0.13.0/apolo-cli-0.13.0-linux-arm64.tar.gz"
-      sha256 "5c673b4a5258cd28aa955943bbad20e7319fc07162fe8f365d039fca1e75a7cc"
+      url "https://github.com/webcafeina/Apolo/releases/download/v0.14.0/apolo-cli-0.14.0-linux-arm64.tar.gz"
+      sha256 "58d37dfd2f3f565acc534cf70469d6ceb24dc67bba0f9c04f45641463a629aeb"
     end
   end
 
