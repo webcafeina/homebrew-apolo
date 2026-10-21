@@ -21,14 +21,15 @@ jobs:
       - run: brew install webcafeina/apolo/apolo
       - run: brew test webcafeina/apolo/apolo
       - run: apolo --version && apolo-mcp --version
-      # Solo el cask: la fórmula lleva un binario por sistema dentro de on_macos y on_linux, que
-      # brew style marca (regla del repositorio oficial) y que en un tap funciona: se comprueba arriba.
-      - run: brew style --cask webcafeina/apolo/apolo
 
   cask:
     runs-on: macos-15
     steps:
       - run: brew install --cask webcafeina/apolo/apolo
+      # Solo el cask, y en macOS (en Linux propone otra forma del macOS mínimo): la fórmula lleva un
+      # binario por sistema dentro de on_macos y on_linux, que brew style marca (regla del
+      # repositorio oficial) y que en un tap funciona: se instala de verdad arriba.
+      - run: brew style --cask webcafeina/apolo/apolo
       - name: Instalada y sin cuarentena
         run: |
           test -d /Applications/Apolo.app
