@@ -1,0 +1,36 @@
+# Instala la fórmula y el cask como lo haría cualquiera, en cada cambio y a mano.
+name: Probar
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  formula:
+    strategy:
+      fail-fast: false
+      matrix:
+        maquina: [macos-15, ubuntu-latest]
+    runs-on: ${{ matrix.maquina }}
+    steps:
+      - name: Homebrew en el PATH (Linux)
+        if: runner.os == 'Linux'
+        run: echo "/home/linuxbrew/.linuxbrew/bin" >> "$GITHUB_PATH"
+      - run: brew --version
+      - run: brew install webcafeina/apolo/apolo
+      - run: brew test webcafeina/apolo/apolo
+      - run: apolo --version && apolo-mcp --version
+      - run: brew style webcafeina/apolo
+
+  cask:
+    runs-on: macos-15
+    steps:
+      - run: brew install --cask webcafeina/apolo/apolo
+      - name: Instalada y sin cuarentena
+        run: |
+          test -d /Applications/Apolo.app
+          if xattr -p com.apple.quarantine /Applications/Apolo.app 2>/dev/null; then
+            echo "Apolo.app sigue en cuarentena"; exit 1
+          fi
+          /Applications/Apolo.app/Contents/MacOS/apolo-mcp --version
