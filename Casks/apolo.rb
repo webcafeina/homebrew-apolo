@@ -1,8 +1,8 @@
 # Generado por publicar.yml de webcafeina/Apolo desde empaquetado/homebrew/ (ADR 0026).
 # No se edita aquí: se cambia la plantilla en Apolo.
 cask "apolo" do
-  version "0.16.0"
-  sha256 "4e69982760648240731bec96f0342867e080dcd5f4f23c46b4994e3ecd73cf60"
+  version "0.17.0"
+  sha256 "5a4746ba8b245c8dadeb1354ffb56de6fd3fcea0370f16362698972efa151ab4"
 
   url "https://github.com/webcafeina/Apolo/releases/download/v#{version}/Apolo_#{version}_universal.dmg"
   name "Apolo"
