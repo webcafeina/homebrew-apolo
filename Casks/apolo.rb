@@ -1,12 +1,12 @@
 # Generado por publicar.yml de webcafeina/Apolo desde empaquetado/homebrew/ (ADR 0026).
 # No se edita aquí: se cambia la plantilla en Apolo.
 cask "apolo" do
-  version "0.18.3"
-  sha256 "d5dba8dc590fe87202822257ec188a418361b884c76409a0a71747775bdefed9"
+  version "1.0.0"
+  sha256 "75c9490ba01eab0944eaf69b763e8098dc68a6b2e21af7f2f1ca697834df14ac"
 
   url "https://github.com/webcafeina/Apolo/releases/download/v#{version}/Apolo_#{version}_universal.dmg"
   name "Apolo"
-  desc "Image optimizer with Squoosh's engines"
+  desc "Desktop image optimizer: lighter images, just as good"
   homepage "https://apolo.webcafeina.com/"
 
   livecheck do
